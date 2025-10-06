@@ -7,7 +7,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Button
         title="Open QMS Welcome"
-        onPress={() => QmsPlugin.openWelcome()}
+        onPress={() => QmsPlugin.openDashboard()}
       />
     </SafeAreaView>
   );
