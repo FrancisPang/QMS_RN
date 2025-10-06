@@ -1,20 +1,18 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-qms-plugin';
-
-const result = multiply(3, 7);
+import React from 'react';
+import { SafeAreaView, Button, StyleSheet } from 'react-native';
+import QmsPlugin from 'react-native-qms-plugin';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Button
+        title="Open QMS Welcome"
+        onPress={() => QmsPlugin.openWelcome()}
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
 });

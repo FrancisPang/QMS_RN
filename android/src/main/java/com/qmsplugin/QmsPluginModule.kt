@@ -1,23 +1,24 @@
+// QmsPluginModule.kt
 package com.qmsplugin
 
-import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.module.annotations.ReactModule
+import android.content.Intent
+import com.facebook.react.bridge.*
+import com.convep.qmsplugin.QmsWelcomeActivity
 
-@ReactModule(name = QmsPluginModule.NAME)
-class QmsPluginModule(reactContext: ReactApplicationContext) :
-  NativeQmsPluginSpec(reactContext) {
+class QmsPluginModule(private val ctx: ReactApplicationContext)
+  : ReactContextBaseJavaModule(ctx) {
 
-  override fun getName(): String {
-    return NAME
-  }
+  override fun getName() = "QmsPlugin"
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
-  override fun multiply(a: Double, b: Double): Double {
-    return a * b
-  }
-
-  companion object {
-    const val NAME = "QmsPlugin"
+  @ReactMethod
+  fun openWelcome(promise: Promise) {
+    try {
+      val intent = Intent(ctx, QmsWelcomeActivity::class.java) // from the AAR
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+      ctx.startActivity(intent)
+      promise.resolve(true)
+    } catch (e: Exception) {
+      promise.reject("QMS_OPEN_FAIL", e)
+    }
   }
 }
