@@ -1,18 +1,21 @@
 import React from 'react';
-import { SafeAreaView, Button, StyleSheet } from 'react-native';
-import QmsPlugin from 'react-native-qms-plugin';
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { QmsPluginDashboard } from 'react-native-qms-plugin';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        title="Open QMS Welcome"
-        onPress={() => QmsPlugin.openDashboard()}
-      />
+      <QmsPluginDashboard style={styles.dashboard} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight ?? 0) : 0,
+  },
+  dashboard: {
+    flex: 1,
+  },
 });

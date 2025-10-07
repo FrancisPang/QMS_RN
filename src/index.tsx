@@ -13,7 +13,8 @@ if (Platform.OS === 'android' && !QmsPlugin) {
   );
 }
 
+export { default as QmsPluginDashboard } from './QmsPluginDashboard';
 export default {
-  openDashboard: (): Promise<boolean> => QmsPlugin!.openDashboard(),
-  openWelcome: (): Promise<boolean> => QmsPlugin!.openWelcome(),
+  // Keep your methods too if you like
+  openDashboard: () => (NativeModules as any).QmsPlugin.openDashboard?.(),
 };
