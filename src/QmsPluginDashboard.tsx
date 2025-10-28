@@ -1,9 +1,14 @@
-import React from 'react';
-import { requireNativeComponent, ViewProps } from 'react-native';
+// src/QmsPluginDashboard.tsx
+import { requireNativeComponent } from 'react-native';
+import type { ViewProps } from 'react-native';
 
-type Props = ViewProps; // extend later with custom props if needed
-const NativeDashboard = requireNativeComponent<Props>('QmsDashboard');
+export type QmsPluginDashboardProps = ViewProps;
 
-export default function QmsPluginDashboard(props: Props) {
+const NativeDashboard = requireNativeComponent<QmsPluginDashboardProps>(
+  // IMPORTANT: must match the native view name registered on Android/iOS
+  'QmsDashboard'
+);
+
+export default function QmsPluginDashboard(props: QmsPluginDashboardProps) {
   return <NativeDashboard {...props} />;
 }
