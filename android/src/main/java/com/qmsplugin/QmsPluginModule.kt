@@ -4,7 +4,7 @@ package com.qmsplugin
 import android.content.Intent
 import com.facebook.react.bridge.*
 import com.convep.qmsplugin.QmsWelcomeActivity
-import com.convep.qmsplugin.QmsDashboardActivity
+import com.convep.qmsplugin.dashboard.QmsDashboardActivity
 
 class QmsPluginModule(private val ctx: ReactApplicationContext)
   : ReactContextBaseJavaModule(ctx) {

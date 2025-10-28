@@ -1,7 +1,6 @@
 import { NativeModules, Platform } from 'react-native';
 
 type Native = {
-  openWelcome(): Promise<boolean>;
   openDashboard(): Promise<boolean>;
 };
 
