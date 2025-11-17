@@ -3,7 +3,6 @@
 // import { QmsPluginDashboard } from 'react-native-qms-plugin';
 
 // export default function App() {
-//   const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImF0aGlyYWh6YWlkaUBjb252ZXAuY29tIiwicGFzc3dvcmQiOiIkMnkkMTAkNU9xYklqMnZ6UHJwckJrcVd5c3I2LmJCc1hVYS9Hd014eUhnL3RhUUhPUkNQcGdmTG8yakciLCJzdWIiOjIxNzAsImlzcyI6Imh0dHBzOi8va2l0YWRldi5jb21tdWRlc2suY29tL2FwaS9vd25lci9hdXRoL3Bhc3N3b3JkbGVzc19sb2dpbiIsImlhdCI6MTc2Mjg0NTA1MywiZXhwIjoyMDc4NDE0NTczLCJuYmYiOjE3NjI4NDUwNTMsImp0aSI6IjcxRExNQ3JEaVJ2emZPNXgifQ.VMJF-9OZ3LCDbwnJZwYFJxwpBIF7seDSajE8pIB5kU4';
 //   const companyCode = 'ABC123';
 //   return (
 //     <SafeAreaView style={styles.container}>
