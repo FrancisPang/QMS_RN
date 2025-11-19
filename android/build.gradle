@@ -76,8 +76,7 @@ dependencies {
   implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   compileOnly "com.facebook.react:react-android:+"
-  // implementation files('libs/qmsplugin-release.aar')
-  implementation files('/Users/alypmustaqim/Desktop/qmsPlugin/qmsplugin/build/outputs/aar/qmsplugin-release.aar')
+  implementation files('libs/qmsplugin-release.aar')
   implementation "androidx.appcompat:appcompat:1.6.1"
   implementation "com.google.android.material:material:1.12.0"
   implementation "androidx.constraintlayout:constraintlayout:2.2.0"
