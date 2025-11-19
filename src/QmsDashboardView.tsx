@@ -3,14 +3,17 @@ import React from 'react';
 import { requireNativeComponent, Platform } from 'react-native';
 import type { ViewStyle } from 'react-native';
 
-type Props = {
+export type QmsDashboardProps = {
   style?: ViewStyle;
+  clientID?: string;
+  clientCode?: string;
+  userToken?: string;
 };
 
-const NativeQmsDashboardView = requireNativeComponent<Props>(
+const NativeQmsDashboardView = requireNativeComponent<QmsDashboardProps>(
   Platform.OS === 'ios' ? 'QmsDashboardView' : 'QmsDashboard'
 );
 
-export const QmsDashboardView: React.FC<Props> = (props) => {
+export const QmsDashboardView: React.FC<QmsDashboardProps> = (props) => {
   return <NativeQmsDashboardView {...props} />;
 };

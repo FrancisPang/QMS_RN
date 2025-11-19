@@ -18,6 +18,7 @@
 //   // Keep your methods too if you like
 //   openDashboard: () => (NativeModules as any).QmsPlugin.openDashboard?.(),
 // };
+//log
 
 import QmsPlugin from './NativeQmsPlugin';
 export { QmsDashboardView } from './QmsDashboardView';
