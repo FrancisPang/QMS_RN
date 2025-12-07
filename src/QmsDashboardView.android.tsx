@@ -14,17 +14,34 @@ const { QmsModule } = NativeModules as {
 
 export const QmsDashboardView: React.FC<QmsDashboardViewProps> = ({
   style,
+  clientID,
+  clientCode,
   ClientID,
   ClientCode,
   user_token,
+  token,
+  userToken,
   autoShow = true,
 }) => {
   useEffect(() => {
+    const resolvedClientID = clientID ?? ClientID ?? '';
+    const resolvedClientCode = clientCode ?? ClientCode ?? '';
+    const resolvedToken = user_token ?? token ?? userToken ?? '';
+
     if (autoShow && QmsModule?.showQms) {
       // map props to native method args
-      QmsModule.showQms(user_token, ClientID, ClientCode);
+      QmsModule.showQms(resolvedToken, resolvedClientID, resolvedClientCode);
     }
-  }, [ClientID, ClientCode, user_token, autoShow]);
+  }, [
+    clientID,
+    clientCode,
+    ClientID,
+    ClientCode,
+    user_token,
+    token,
+    userToken,
+    autoShow,
+  ]);
 
   // Android doesn’t need to show native UI as a "view" here,
   // we just render an empty container so JSX stays consistent.
