@@ -75,7 +75,7 @@ dependencies {
     implementation "com.facebook.react:react-android"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'com.facebook.react:react-native:+' 
-    implementation "com.convep.qms:qms-plugin:1.0.0"
+    implementation "com.convep.qms:qms-plugin:1.2.0"
     // implementation files('libs/Qms_plugin-release.aar')
     implementation 'androidx.appcompat:appcompat:1.6.1'
 

@@ -1,6 +1,6 @@
 {
   "name": "@convep_mobilogy/react-native-qms-plugin",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "description": "To handle defect managment",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
